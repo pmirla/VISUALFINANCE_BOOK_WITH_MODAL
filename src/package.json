@@ -1,0 +1,16 @@
+{
+  "name": "react-modal-gallery-finance-book",
+  "version": "0.0.0",
+  "description": "A simple example deployed using react-codesandboxer",
+  "main": "index.js",
+  "dependencies": {
+    "@material-ui/core": "4.11.2",
+    "@material-ui/lab": "4.0.0-alpha.57",
+    "axios": "0.21.1",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "latest",
+    "react-scripts": "2.0.0"
+  },
+  "keywords": []
+}

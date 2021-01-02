@@ -99,6 +99,12 @@ function Home({ chapters }) {
   const chapterArray = chapters.children;
   const [spacing, setSpacing] = React.useState(2);
   const [isOpen, SetIsOpen] = useState(false);
+  const [DialogChildsOpen, SetDialogChild] = useState(
+    <>
+      <App1 />
+    </>
+  );
+  let DialogChild = <App1 />;
   const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1
@@ -113,7 +119,9 @@ function Home({ chapters }) {
   }));
   const classes = useStyles();
 
-  const handleDialogOpen = () => {
+  const handleDialogOpen = (event) => {
+    console.log(event.currentTarget.id);
+    SetDialogChild(<App2 />);
     SetIsOpen(true);
   };
 
@@ -128,7 +136,12 @@ function Home({ chapters }) {
       console.log(detail.name);
       detailArray.push(
         <Grid key={detail.name} item>
-          <ButtonBase className={classes.cardButton} onClick={handleDialogOpen}>
+          <ButtonBase
+            key={detail.name}
+            id={detail.id}
+            className={classes.cardButton}
+            onClick={handleDialogOpen}
+          >
             <MediaCard title={detail.name} />
             {/* <div> {detail.name}</div> */}
           </ButtonBase>
@@ -173,9 +186,28 @@ function Home({ chapters }) {
       <h2> This should be result </h2>
       {returnArray}
       <FullScreenDialog isOpen={isOpen} handleClose={handleDialogClose}>
-        <h1> Hi There </h1>
-        <Vectors />
+        {DialogChildsOpen}
       </FullScreenDialog>
+    </div>
+  );
+}
+
+function App1() {
+  const text = "Hello World App1";
+
+  return (
+    <div className="App">
+      <p> {text} </p>
+    </div>
+  );
+}
+
+function App2() {
+  const text = "Hello World App2";
+
+  return (
+    <div className="App">
+      <p> {text} </p>
     </div>
   );
 }

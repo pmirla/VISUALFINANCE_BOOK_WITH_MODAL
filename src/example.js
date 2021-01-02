@@ -15,6 +15,7 @@ import MediaCard from "./components/singleCard";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
+import ButtonBase from '@material-ui/core/ButtonBase';
 
 let topicsJSON = require("./data/topics.json");
 
@@ -94,6 +95,7 @@ function Image({ color }) {
 }
 
 function Home({ chapters }) {
+  let location = useLocation();
   const chapterArray = chapters.children;
   const [spacing, setSpacing] = React.useState(2);
 
@@ -111,6 +113,11 @@ function Home({ chapters }) {
   }));
   const classes = useStyles();
 
+  const handleClickOpen = () => {
+    debugger;
+    alert("Hi");
+  };
+
   let returnArray = [];
   chapterArray.forEach((topic) => {
     console.log(topic.name);
@@ -119,8 +126,10 @@ function Home({ chapters }) {
       console.log(detail.name);
       detailArray.push(
         <Grid key={detail.name} item>
-          <MediaCard title={detail.name} />
-          {/* <div> {detail.name}</div> */}
+          <ButtonBase className={classes.cardButton} onClick={handleClickOpen}>
+            <MediaCard title={detail.name} />
+            {/* <div> {detail.name}</div> */}
+          </ButtonBase>
         </Grid>
       );
     });
@@ -128,6 +137,7 @@ function Home({ chapters }) {
     const element = (
       <>
         <h1>{topic.name}</h1>
+
         <Grid container className={classes.root} spacing={10}>
           <Grid item xs={12}>
             <Grid container justify="left" spacing={spacing}>

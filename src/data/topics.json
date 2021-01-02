@@ -5,13 +5,16 @@
       "name": "1. Vectors",
       "children": [
         {
-          "name": "1.1 Definition"
+          "name": "1.1 Definition",
+          "id": "1.1"
         },
         {
-          "name": "1.2 Addition, Subrtraction"
+          "name": "1.2 Addition, Subrtraction",
+          "id": "1.2"
         },
         {
-          "name": "1.2 Dot Product"
+          "name": "1.3 Dot Product",
+          "id": "1.3"
         }
       ]
     },
@@ -20,55 +23,55 @@
       "children": [
         {
           "name": "2.1 Definition of a Function",
-          "value": 17010
+          "id": "2.1"
         },
         {
           "name": "2.2 Examples",
-          "value": 5842
+          "id": "2.2"
         },
         {
           "name": "2.3 Linking multiple functions",
-          "value": 1041
+          "id": "2.3"
         },
         {
           "name": "2.4 Parametric Functions",
-          "value": 5176
+          "id": "2.4"
         },
         {
           "name": "2.5 Functions with several Variables",
-          "value": 449
+          "id": "2.5"
         },
         {
           "name": "2.6 Constraint Functions",
-          "value": 5593
+          "id": "2.6"
         },
         {
           "name": "2.7 Utility Function",
-          "value": 5534
+          "id": "2.7"
         },
         {
           "name": "2.8 Production Function",
-          "value": 9201
+          "id": "2.8"
         },
         {
           "name": "2.9 Present Value Function",
-          "value": 19975
+          "id": "2.9"
         },
         {
           "name": "2.10 Capital Asset Pricing Model",
-          "value": 1116
+          "id": "2.10"
         },
         {
           "name": "2.11 Payoffs of Contracts",
-          "value": 6006
+          "id": "2.11"
         },
         {
           "name": "2.12 Payoffs of an Option",
-          "value": 6006
+          "id": "2.12"
         },
         {
           "name": "2.13 Forward Exchange Rate",
-          "value": 6006
+          "id": "2.13"
         }
       ]
     },
@@ -77,51 +80,51 @@
       "children": [
         {
           "name": "3.1 Derivative at a Point",
-          "value": 1
+          "id": "2.1"
         },
         {
           "name": "3.2 Differentiation Rules",
-          "value": 1759
+          "id": "3.2"
         },
         {
           "name": "3.3 Maximum and Minimum of a Function",
-          "value": 2165
+          "id": "3.3"
         },
         {
           "name": "3.4 Mean Value Theorem",
-          "value": 586
+          "id": "3.4"
         },
         {
           "name": "3.5 Approximation of Functions by Polynoms",
-          "value": 3331
+          "id": "3.5"
         },
         {
           "name": "3.6 Integration: Definite Integral",
-          "value": 772
+          "id": "3.6"
         },
         {
           "name": "3.7 Integration: Anti Derivative Function",
-          "value": 3322
+          "id": "3.7"
         },
         {
           "name": "3.8 First Fundamental Theorem of Calculus",
-          "value": 3322
+          "id": "3.8"
         },
         {
           "name": "3.9 Second Fundamental Theorem of Calculus",
-          "value": 3322
+          "id": "3.9"
         },
         {
           "name": "3.10 Change in Variables in Indefinite Integrals",
-          "value": 3322
+          "id": "3.10"
         },
         {
           "name": "3.11 Double Integral",
-          "value": 3322
+          "id": "3.11"
         },
         {
           "name": "3.12 Duration and Convexity of securitisation assets",
-          "value": 3322
+          "id": "3.12"
         }
       ]
     },
@@ -130,40 +133,40 @@
       "children": [
         {
           "name": "4.1 Introduction",
-          "value": 8833
+          "id": "4.1"
         },
         {
-          "name": "4.3 The Chain Rule",
-          "value": 1732
+          "name": "4.2 The Chain Rule",
+          "id": "4.2"
         },
         {
-          "name": "4.4 Derivatives of Implicit Functions",
-          "value": 3623
+          "name": "4.3 Derivatives of Implicit Functions",
+          "id": "4.3"
         },
         {
-          "name": "4.5 The Total Differential",
-          "value": 10066
+          "name": "4.4 The Total Differential",
+          "id": "4.4"
         },
         {
-          "name": "4.6 Directional Derivatives",
-          "value": 10066
+          "name": "4.5 Directional Derivatives",
+          "id": "4.5"
         },
         {
-          "name": "4.7 Gradients",
-          "value": 10066
+          "name": "4.6 Gradients",
+          "id": "4.6"
         },
         {
-          "name": "4.8 Tangent Planes and Normal Lines",
-          "value": 10066
+          "name": "4.7 Tangent Planes and Normal Lines",
+          "id": "4.7"
         },
         {
-          "name": "4.9 Extrema of Functions of several Variables",
-          "value": 10066
+          "name": "4.8 Extrema of Functions of several Variables",
+          "id": "4.8"
         },
 
         {
-          "name": "4.10 Extremal Problems with Constraints",
-          "value": 10066
+          "name": "4.9 Extremal Problems with Constraints",
+          "id": "4.9"
         }
       ]
     },
@@ -171,34 +174,44 @@
       "name": "5. Log and Exponetials in Finance ",
       "children": [
         {
-          "name": "5.1 Exponents and Logarithms"
+          "name": "5.1 Exponents and Logarithms",
+          "id": "5.1"
         },
         {
-          "name": "5.2 Logarithmic Functions"
+          "name": "5.2 Logarithmic Functions",
+          "id": "5.2"
         },
         {
-          "name": "5.3 Logarithmic Identities"
+          "name": "5.3 Logarithmic Identities",
+          "id": "5.3"
         },
         {
-          "name": "5.4 Change of Base"
+          "name": "5.4 Change of Base",
+          "id": "5.4"
         },
         {
-          "name": "5.5 The Natural Logarithmic Function"
+          "name": "5.5 The Natural Logarithmic Function",
+          "id": "5.5"
         },
         {
-          "name": "5.6 The Exponential Function"
+          "name": "5.6 The Exponential Function",
+          "id": "5.6"
         },
         {
-          "name": "5.7 Power Series "
+          "name": "5.7 Power Series ",
+          "id": "5.7"
         },
         {
-          "name": "5.8 General Functions"
+          "name": "5.8 General Functions",
+          "id": "5.8"
         },
         {
-          "name": "5.9 Some Applications "
+          "name": "5.9 Some Applications ",
+          "id": "5.9"
         },
         {
-          "name": "5.10 Integration by Parts"
+          "name": "5.10 Integration by Parts",
+          "id": "5.10"
         }
       ]
     },
@@ -207,7 +220,7 @@
       "children": [
         {
           "name": "6.1 Vectors, Direction and Magnitude",
-          "value": 1082
+          "id": "6.1"
         }
       ]
     },
@@ -216,23 +229,23 @@
       "children": [
         {
           "name": "7.1 Examples",
-          "value": 2105
+          "id": "7.1"
         },
         {
           "name": "7.2 Solution Methods",
-          "value": 1316
+          "id": "7.2"
         },
         {
           "name": "7.3 First-Order Linear Differential Equations",
-          "value": 3151
+          "id": "7.3"
         },
         {
           "name": "7.4 Second-Order Linear Differential Equations",
-          "value": 3770
+          "id": "7.4"
         },
         {
           "name": "7.5 Linear Differential Equation Systems",
-          "value": 2435
+          "id": "7.5"
         }
       ]
     },
@@ -241,7 +254,7 @@
       "children": [
         {
           "name": "8.1 Definition",
-          "value": 8258
+          "id": "8.1"
         }
       ]
     },
@@ -250,24 +263,24 @@
       "children": [
         {
           "name": "9.1 Introduction",
-          "value": 8258
+          "id": "9.1"
         },
         {
           "name": "9.2 The Mathematical Programming Problem",
-          "value": 8258
+          "id": "9.2"
         },
         {
           "name": "9.3 Unconstrained Optimization",
-          "value": 8258
+          "id": "9.3"
         },
         {
           "name": "9.4 Constrained Optimization",
-          "value": 8258
+          "id": "9.4"
         },
 
         {
           "name": "9.5 The General Classical Program",
-          "value": 8258
+          "id": "9.5"
         }
       ]
     },
@@ -276,36 +289,36 @@
       "children": [
         {
           "name": "10.1 Introduction",
-          "value": 8258
+          "id": "10.1"
         },
         {
           "name": "10.2 Formulation of the LP",
-          "value": 8258
+          "id": "10.2"
         },
         {
           "name": "10.3 The Geometry of the LP",
-          "value": 8258
+          "id": "10.3"
         },
         {
           "name": "10.4 The Simplex Method",
-          "value": 8258
+          "id": "10.4"
         },
 
         {
           "name": "10.5 Examples",
-          "value": 8258
+          "id": "10.5"
         },
         {
           "name": "10.6 The Dual Problem of the LP",
-          "value": 8258
+          "id": "10.6"
         },
         {
           "name": "10.7 The Lagrangian Approach",
-          "value": 8258
+          "id": "10.7"
         },
         {
           "name": "10.8 Economic Theory and Duality",
-          "value": 8258
+          "id": "10.8"
         }
       ]
     }

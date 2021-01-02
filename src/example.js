@@ -121,7 +121,7 @@ function Home({ chapters }) {
 
   const handleDialogOpen = (event) => {
     console.log(event.currentTarget.id);
-    SetDialogChild(<App2 />);
+    SetDialogChild(<Vectors />);
     SetIsOpen(true);
   };
 

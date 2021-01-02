@@ -1,0 +1,313 @@
+{
+  "name": " Ch 1 to 10",
+  "children": [
+    {
+      "name": "1. Vectors",
+      "children": [
+        {
+          "name": "1.1 Definition"
+        },
+        {
+          "name": "1.2 Addition, Subrtraction"
+        },
+        {
+          "name": "1.2 Dot Product"
+        }
+      ]
+    },
+    {
+      "name": "2. Functions and Models",
+      "children": [
+        {
+          "name": "2.1 Definition of a Function",
+          "value": 17010
+        },
+        {
+          "name": "2.2 Examples",
+          "value": 5842
+        },
+        {
+          "name": "2.3 Linking multiple functions",
+          "value": 1041
+        },
+        {
+          "name": "2.4 Parametric Functions",
+          "value": 5176
+        },
+        {
+          "name": "2.5 Functions with several Variables",
+          "value": 449
+        },
+        {
+          "name": "2.6 Constraint Functions",
+          "value": 5593
+        },
+        {
+          "name": "2.7 Utility Function",
+          "value": 5534
+        },
+        {
+          "name": "2.8 Production Function",
+          "value": 9201
+        },
+        {
+          "name": "2.9 Present Value Function",
+          "value": 19975
+        },
+        {
+          "name": "2.10 Capital Asset Pricing Model",
+          "value": 1116
+        },
+        {
+          "name": "2.11 Payoffs of Contracts",
+          "value": 6006
+        },
+        {
+          "name": "2.12 Payoffs of an Option",
+          "value": 6006
+        },
+        {
+          "name": "2.13 Forward Exchange Rate",
+          "value": 6006
+        }
+      ]
+    },
+    {
+      "name": "3. Differentiation and Integration ",
+      "children": [
+        {
+          "name": "3.1 Derivative at a Point",
+          "value": 1
+        },
+        {
+          "name": "3.2 Differentiation Rules",
+          "value": 1759
+        },
+        {
+          "name": "3.3 Maximum and Minimum of a Function",
+          "value": 2165
+        },
+        {
+          "name": "3.4 Mean Value Theorem",
+          "value": 586
+        },
+        {
+          "name": "3.5 Approximation of Functions by Polynoms",
+          "value": 3331
+        },
+        {
+          "name": "3.6 Integration: Definite Integral",
+          "value": 772
+        },
+        {
+          "name": "3.7 Integration: Anti Derivative Function",
+          "value": 3322
+        },
+        {
+          "name": "3.8 First Fundamental Theorem of Calculus",
+          "value": 3322
+        },
+        {
+          "name": "3.9 Second Fundamental Theorem of Calculus",
+          "value": 3322
+        },
+        {
+          "name": "3.10 Change in Variables in Indefinite Integrals",
+          "value": 3322
+        },
+        {
+          "name": "3.11 Double Integral",
+          "value": 3322
+        },
+        {
+          "name": "3.12 Duration and Convexity of securitisation assets",
+          "value": 3322
+        }
+      ]
+    },
+    {
+      "name": "4. Partial Derivatives",
+      "children": [
+        {
+          "name": "4.1 Introduction",
+          "value": 8833
+        },
+        {
+          "name": "4.3 The Chain Rule",
+          "value": 1732
+        },
+        {
+          "name": "4.4 Derivatives of Implicit Functions",
+          "value": 3623
+        },
+        {
+          "name": "4.5 The Total Differential",
+          "value": 10066
+        },
+        {
+          "name": "4.6 Directional Derivatives",
+          "value": 10066
+        },
+        {
+          "name": "4.7 Gradients",
+          "value": 10066
+        },
+        {
+          "name": "4.8 Tangent Planes and Normal Lines",
+          "value": 10066
+        },
+        {
+          "name": "4.9 Extrema of Functions of several Variables",
+          "value": 10066
+        },
+
+        {
+          "name": "4.10 Extremal Problems with Constraints",
+          "value": 10066
+        }
+      ]
+    },
+    {
+      "name": "5. Log and Exponetials in Finance ",
+      "children": [
+        {
+          "name": "5.1 Exponents and Logarithms"
+        },
+        {
+          "name": "5.2 Logarithmic Functions"
+        },
+        {
+          "name": "5.3 Logarithmic Identities"
+        },
+        {
+          "name": "5.4 Change of Base"
+        },
+        {
+          "name": "5.5 The Natural Logarithmic Function"
+        },
+        {
+          "name": "5.6 The Exponential Function"
+        },
+        {
+          "name": "5.7 Power Series "
+        },
+        {
+          "name": "5.8 General Functions"
+        },
+        {
+          "name": "5.9 Some Applications "
+        },
+        {
+          "name": "5.10 Integration by Parts"
+        }
+      ]
+    },
+    {
+      "name": "6. Linear Algebra",
+      "children": [
+        {
+          "name": "6.1 Vectors, Direction and Magnitude",
+          "value": 1082
+        }
+      ]
+    },
+    {
+      "name": "7. Differential Equations",
+      "children": [
+        {
+          "name": "7.1 Examples",
+          "value": 2105
+        },
+        {
+          "name": "7.2 Solution Methods",
+          "value": 1316
+        },
+        {
+          "name": "7.3 First-Order Linear Differential Equations",
+          "value": 3151
+        },
+        {
+          "name": "7.4 Second-Order Linear Differential Equations",
+          "value": 3770
+        },
+        {
+          "name": "7.5 Linear Differential Equation Systems",
+          "value": 2435
+        }
+      ]
+    },
+    {
+      "name": "8. Difference Equations",
+      "children": [
+        {
+          "name": "8.1 Definition",
+          "value": 8258
+        }
+      ]
+    },
+    {
+      "name": "9. Optimization Theory",
+      "children": [
+        {
+          "name": "9.1 Introduction",
+          "value": 8258
+        },
+        {
+          "name": "9.2 The Mathematical Programming Problem",
+          "value": 8258
+        },
+        {
+          "name": "9.3 Unconstrained Optimization",
+          "value": 8258
+        },
+        {
+          "name": "9.4 Constrained Optimization",
+          "value": 8258
+        },
+
+        {
+          "name": "9.5 The General Classical Program",
+          "value": 8258
+        }
+      ]
+    },
+    {
+      "name": "10. Linear Programming",
+      "children": [
+        {
+          "name": "10.1 Introduction",
+          "value": 8258
+        },
+        {
+          "name": "10.2 Formulation of the LP",
+          "value": 8258
+        },
+        {
+          "name": "10.3 The Geometry of the LP",
+          "value": 8258
+        },
+        {
+          "name": "10.4 The Simplex Method",
+          "value": 8258
+        },
+
+        {
+          "name": "10.5 Examples",
+          "value": 8258
+        },
+        {
+          "name": "10.6 The Dual Problem of the LP",
+          "value": 8258
+        },
+        {
+          "name": "10.7 The Lagrangian Approach",
+          "value": 8258
+        },
+        {
+          "name": "10.8 Economic Theory and Duality",
+          "value": 8258
+        }
+      ]
+    }
+  ]
+}

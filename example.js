@@ -10,13 +10,7 @@ import {
 } from "react-router-dom";
 import GGBInject from "./GGBInject";
 import useFetchData from "./UseFetchData";
-import { Alert, AlertTitle, TimelineOppositeContent } from "@material-ui/lab";
-import MediaCard from "./components/singleCard";
-import Paper from "@material-ui/core/Paper";
-import Grid from "@material-ui/core/Grid";
-import { makeStyles } from "@material-ui/core/styles";
-
-let topicsJSON = require("./data/topics.json");
+import { Alert, AlertTitle } from "@material-ui/lab";
 
 // This example shows how to render two different screens
 // (or the same screen in a different context) at the same URL,
@@ -50,9 +44,9 @@ function ModalSwitch() {
   return (
     <div>
       <Switch location={background || location}>
-        <Route exact path="/" children={<Home chapters={topicsJSON} />} />
+        <Route exact path="/" children={<Home />} />
         <Route path="/gallery" children={<Gallery />} />
-        {/* <Route path="/img/:id" children={<ImageView />} /> */}
+        <Route path="/img/:id" children={<ImageView />} />
       </Switch>
 
       {/* Show the modal when a background page is set */}
@@ -62,11 +56,11 @@ function ModalSwitch() {
 }
 
 const IMAGES = [
-  { id: 0, title: "Chapter 1", color: "DarkOrchid" },
-  { id: 1, title: "Chapter 2", color: "LimeGreen" },
-  { id: 2, title: "Chapter 3", color: "Tomato" },
-  { id: 3, title: "Chapter 4", color: "#789" },
-  { id: 4, title: "Chapter 5", color: "Crimson" }
+  { id: 0, title: "Chapter1", color: "DarkOrchid" },
+  { id: 1, title: "Chapter2", color: "LimeGreen" },
+  { id: 2, title: "Chapter3", color: "Tomato" },
+  { id: 3, title: "Chapter4", color: "#789" },
+  { id: 4, title: "Chapter5", color: "Crimson" }
 ];
 
 function Thumbnail({ color }) {
@@ -93,58 +87,7 @@ function Image({ color }) {
   );
 }
 
-function Home({ chapters }) {
-  const chapterArray = chapters.children;
-  const [spacing, setSpacing] = React.useState(2);
-
-  const useStyles = makeStyles((theme) => ({
-    root: {
-      flexGrow: 1
-    },
-    paper: {
-      height: 240,
-      width: 350
-    },
-    control: {
-      padding: theme.spacing(2)
-    }
-  }));
-  const classes = useStyles();
-
-  let returnArray = [];
-  chapterArray.forEach((topic) => {
-    console.log(topic.name);
-    let detailArray = [];
-    topic.children.forEach((detail) => {
-      console.log(detail.name);
-      detailArray.push(
-        <Grid key={detail.name} item>
-          <MediaCard title={detail.name} />
-          {/* <div> {detail.name}</div> */}
-        </Grid>
-      );
-    });
-
-    const element = (
-      <>
-        <h1>{topic.name}</h1>
-        <Grid container className={classes.root} spacing={10}>
-          <Grid item xs={12}>
-            <Grid container justify="left" spacing={spacing}>
-              {detailArray}
-            </Grid>
-          </Grid>
-        </Grid>
-      </>
-    );
-    returnArray.push(element);
-  });
-
-  const divItems = chapterArray.map((eachTopic) => (
-    <>
-      <div key={eachTopic.name}>{eachTopic.name}</div>
-    </>
-  ));
+function Home() {
   return (
     <div>
       <Link to="/gallery">Visit the Gallery</Link>
@@ -157,9 +100,6 @@ function Home({ chapters }) {
           <Link to="/img/4">Crimson</Link>
         </li>
       </ul>
-      {divItems}
-      <h2> This should be result </h2>
-      {returnArray}
     </div>
   );
 }
@@ -201,15 +141,17 @@ function ImageView() {
   );
 }
 
-function Vectors({ GGBParams }) {
+function Vectors() {
+  useEffect(() => {}, []);
+
   const [{ data, isLoading, isError }, setFetchUrl] = useFetchData({
     initialFetchUrl:
       "https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/sum_of_vectors_02.json"
   });
-  let newParameters = {};
+  let newParameters2 = {};
   if (!isLoading)
     if (typeof data.res !== "undefined") {
-      newParameters = {
+      newParameters2 = {
         // material_id: "ee5nfsq6",
         width: 1200,
         height: 1000,
@@ -231,7 +173,7 @@ function Vectors({ GGBParams }) {
             Interact with this Applet to understand the formula —{" "}
             <strong>check it out!</strong>
           </Alert>
-          <GGBInject newParameters={newParameters} id="someId1" />
+          <GGBInject newParameters={newParameters2} id="someId1" />
         </>
       )}
     </>
@@ -250,11 +192,6 @@ function Modal() {
     history.goBack();
   };
 
-  const newParameters = {
-    width: 1200,
-    height: 1000,
-    borderColor: "#FFFFFF"
-  };
   return (
     <>
       <div
@@ -283,11 +220,9 @@ function Modal() {
           <button type="button" onClick={back}>
             Close
           </button>
-
           <Vectors />
-          <Vectors />
-          <h1>{image.title}</h1>
-          <Image color={image.color} />
+          {/* <h1>{image.title}</h1> */}
+          {/* <Image color={image.color} /> */}
           <button type="button" onClick={back}>
             Close
           </button>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,8 +15,8 @@ import MediaCard from "./components/singleCard";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import ButtonBase from '@material-ui/core/ButtonBase';
-
+import ButtonBase from "@material-ui/core/ButtonBase";
+import FullScreenDialog from "./components/DialogComponent";
 let topicsJSON = require("./data/topics.json");
 
 // This example shows how to render two different screens
@@ -98,7 +98,7 @@ function Home({ chapters }) {
   let location = useLocation();
   const chapterArray = chapters.children;
   const [spacing, setSpacing] = React.useState(2);
-
+  const [isOpen, SetIsOpen] = useState(false);
   const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1
@@ -113,11 +113,13 @@ function Home({ chapters }) {
   }));
   const classes = useStyles();
 
-  const handleClickOpen = () => {
-    debugger;
-    alert("Hi");
+  const handleDialogOpen = () => {
+    SetIsOpen(true);
   };
 
+  const handleDialogClose = () => {
+    SetIsOpen(false);
+  };
   let returnArray = [];
   chapterArray.forEach((topic) => {
     console.log(topic.name);
@@ -126,7 +128,7 @@ function Home({ chapters }) {
       console.log(detail.name);
       detailArray.push(
         <Grid key={detail.name} item>
-          <ButtonBase className={classes.cardButton} onClick={handleClickOpen}>
+          <ButtonBase className={classes.cardButton} onClick={handleDialogOpen}>
             <MediaCard title={detail.name} />
             {/* <div> {detail.name}</div> */}
           </ButtonBase>
@@ -170,6 +172,10 @@ function Home({ chapters }) {
       {divItems}
       <h2> This should be result </h2>
       {returnArray}
+      <FullScreenDialog isOpen={isOpen} handleClose={handleDialogClose}>
+        <h1> Hi There </h1>
+        <Vectors />
+      </FullScreenDialog>
     </div>
   );
 }

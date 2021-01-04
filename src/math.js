@@ -12,9 +12,9 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import FullScreenDialog from "./components/DialogComponent";
-const pages = require("./pages/");
+// const pages = require("./pages/");
 
-let topicsJSON = require("./data/topics.json");
+// let topicsJSON = require("./data/topics.json");
 
 export default function MathApp() {
   return (
@@ -27,29 +27,54 @@ export default function MathApp() {
 function ModalSwitch() {
   let location = useLocation();
   let background = location.state && location.state.background;
+
+  let topicsJSON = [];
+
+  try {
+    topicsJSON = require(`./pages/`).default();
+  } catch (err) {
+    console.log(err);
+  }
+
+  const chaptersAndTopics = topicsJSON[0]; //figure out more about this array from object
+  const chapterArray = chaptersAndTopics.children;
+  let componentsAndIds = [];
+
+  chapterArray.forEach((topic) => {
+    topic.children.forEach((detail) => {
+      componentsAndIds.push(detail);
+    });
+  });
+
   return (
     <div>
       <Switch location={background || location}>
-        <Route exact path="/" children={<Home chapters={topicsJSON} />} />
-        <Route exact path="/math" children={<Home chapters={topicsJSON} />} />
+        <Route
+          exact
+          path="/"
+          children={
+            <Home
+              chapterArray={chapterArray}
+              componentsForDialog={componentsAndIds}
+            />
+          }
+        />
+        <Route
+          exact
+          path="/math" //This is optional.Not used yet. Route for /math
+          children={<Home chapters={chaptersAndTopics} />}
+        />
       </Switch>
     </div>
   );
 }
 
-function Home({ chapters }) {
+function Home({ chapterArray, componentsForDialog }) {
   let location = useLocation();
-  const chapterArray = chapters.children;
   const [spacing, setSpacing] = React.useState(2);
   const [isOpen, SetIsOpen] = useState(false);
 
-  let pages = [];
-
-  try {
-    pages = require(`./pages/`).default();
-  } catch (err) {
-    console.log(err);
-  }
+  let pages = componentsForDialog;
 
   const [DialogChildsOpen, SetDialogChild] = useState(<>pages[0].Component</>);
   const useStyles = makeStyles((theme) => ({
@@ -66,15 +91,16 @@ function Home({ chapters }) {
   }));
   const classes = useStyles();
 
+  // Handle
   const handleDialogOpen = (event) => {
+    debugger;
     console.log(event.currentTarget.id);
     const clickedBoxId = event.currentTarget.id;
     // SetDialogChild(<Vectors />);
 
     const matchedPageObject = pages.filter((d) => d.id === clickedBoxId);
-    const failedPageObject = pages.filter((d) => d.id === "default");
-    let pageComponent = failedPageObject[0].Component;
-    debugger;
+    // const failedPageObject = pages.filter((d) => d.id === "default");
+    let pageComponent = <DefaultComponent />;
 
     if (matchedPageObject.length !== 0) {
       pageComponent = matchedPageObject[0].Component;
@@ -87,6 +113,8 @@ function Home({ chapters }) {
   const handleDialogClose = () => {
     SetIsOpen(false);
   };
+
+  // Handle
   let returnArray = [];
   chapterArray.forEach((topic) => {
     console.log(topic.name);
@@ -129,6 +157,7 @@ function Home({ chapters }) {
       <div key={eachTopic.name}>{eachTopic.name}</div>
     </>
   ));
+
   return (
     <div>
       <h2> Financial Mathematics </h2>
@@ -137,6 +166,16 @@ function Home({ chapters }) {
       <FullScreenDialog isOpen={isOpen} handleClose={handleDialogClose}>
         {DialogChildsOpen}
       </FullScreenDialog>
+    </div>
+  );
+}
+
+function DefaultComponent() {
+  const text = "Hello World . I am inside math.js / App3";
+
+  return (
+    <div className="App">
+      <p> {text} </p>
     </div>
   );
 }

@@ -6,11 +6,15 @@
   If you experience any struggles with this sandbox, please raise an issue
   on github. :)
 */
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './example';
+import React from "react";
+import ReactDOM from "react-dom";
+import App1 from "./math";
 
 ReactDOM.render(
-<App />,
-document.getElementById('root')
+  [
+    <>
+      <App1 /> <App1 />{" "}
+    </>
+  ],
+  document.getElementById("root")
 );

@@ -12,7 +12,9 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import FullScreenDialog from "./components/DialogComponent";
-// const pages = require("./pages/");
+import Box from "@material-ui/core/Box";
+
+// const pageIdAndComponents = require("./pages/pageIdAndComponents.js").default();
 
 // let topicsJSON = require("./data/topics.json");
 
@@ -76,7 +78,11 @@ function Home({ chapterArray, componentsForDialog }) {
 
   let pages = componentsForDialog;
 
-  const [DialogChildsOpen, SetDialogChild] = useState(<>pages[0].Component</>);
+  const [DialogChildsOpen, SetDialogChild] = useState(
+    <>
+      <DefaultComponent />
+    </>
+  );
   const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1
@@ -93,27 +99,20 @@ function Home({ chapterArray, componentsForDialog }) {
 
   // Handle
   const handleDialogOpen = (event) => {
-    debugger;
     console.log(event.currentTarget.id);
     const clickedBoxId = event.currentTarget.id;
-    // SetDialogChild(<Vectors />);
-
     const matchedPageObject = pages.filter((d) => d.id === clickedBoxId);
-    // const failedPageObject = pages.filter((d) => d.id === "default");
     let pageComponent = <DefaultComponent />;
-
     if (matchedPageObject.length !== 0) {
+      debugger;
       pageComponent = matchedPageObject[0].Component;
     }
-
-    SetDialogChild(pageComponent);
+    SetDialogChild(pageComponent); // This is what gets showed up in Dialog. Look for math/index.js for id's and components
     SetIsOpen(true);
   };
-
   const handleDialogClose = () => {
     SetIsOpen(false);
   };
-
   // Handle
   let returnArray = [];
   chapterArray.forEach((topic) => {
@@ -149,7 +148,7 @@ function Home({ chapterArray, componentsForDialog }) {
         </Grid>
       </>
     );
-    returnArray.push(element);
+    returnArray.push(element); // These are the cards that show up in front page
   });
 
   const divItems = chapterArray.map((eachTopic) => (
@@ -159,14 +158,16 @@ function Home({ chapterArray, componentsForDialog }) {
   ));
 
   return (
-    <div>
-      <h2> Financial Mathematics </h2>
-      {divItems}
-      {returnArray}
-      <FullScreenDialog isOpen={isOpen} handleClose={handleDialogClose}>
-        {DialogChildsOpen}
-      </FullScreenDialog>
-    </div>
+    <Box m={10} p={3}>
+      <div>
+        <h2> Financial Mathematics </h2>
+        {divItems}
+        {returnArray}
+        <FullScreenDialog isOpen={isOpen} handleClose={handleDialogClose}>
+          {DialogChildsOpen}
+        </FullScreenDialog>
+      </div>
+    </Box>
   );
 }
 

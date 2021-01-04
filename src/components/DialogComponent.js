@@ -12,6 +12,7 @@ import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import CloseIcon from "@material-ui/icons/Close";
 import Slide from "@material-ui/core/Slide";
+import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -31,45 +32,49 @@ export default function FullScreenDialog({ isOpen, handleClose, children }) {
   const classes = useStyles();
 
   return (
-    <div>
-      <Dialog
-        fullScreen
-        open={isOpen}
-        onClose={handleClose}
-        TransitionComponent={Transition}
-      >
-        <AppBar className={classes.appBar}>
-          <Toolbar>
-            <IconButton
-              edge="start"
-              color="inherit"
-              onClick={handleClose}
-              aria-label="close"
-            >
-              <CloseIcon />
-            </IconButton>
-            <Typography variant="h6" className={classes.title}>
-              Sound
-            </Typography>
-            <Button autoFocus color="inherit" onClick={handleClose}>
-              save
-            </Button>
-          </Toolbar>
-        </AppBar>
-        {children}
-        <List>
-          <ListItem button>
-            <ListItemText primary="Phone ringtone" secondary="Titania" />
-          </ListItem>
-          <Divider />
-          <ListItem button>
-            <ListItemText
-              primary="Default notification ringtone"
-              secondary="Tethys"
-            />
-          </ListItem>
-        </List>
-      </Dialog>
-    </div>
+    <Box m={2} pt={3}>
+      <div>
+        <Dialog
+          fullScreen
+          open={isOpen}
+          onClose={handleClose}
+          TransitionComponent={Transition}
+        >
+          <AppBar className={classes.appBar}>
+            <Toolbar>
+              <IconButton
+                edge="start"
+                color="inherit"
+                onClick={handleClose}
+                aria-label="close"
+              >
+                <CloseIcon />
+              </IconButton>
+              <Typography variant="h6" className={classes.title}>
+                Sound
+              </Typography>
+              <Button autoFocus color="inherit" onClick={handleClose}>
+                save
+              </Button>
+            </Toolbar>
+          </AppBar>
+          <Box m={5} pt={3}>
+            {children}
+          </Box>
+          <List>
+            <ListItem button>
+              <ListItemText primary="Phone ringtone" secondary="Titania" />
+            </ListItem>
+            <Divider />
+            <ListItem button>
+              <ListItemText
+                primary="Default notification ringtone"
+                secondary="Tethys"
+              />
+            </ListItem>
+          </List>
+        </Dialog>
+      </div>
+    </Box>
   );
 }

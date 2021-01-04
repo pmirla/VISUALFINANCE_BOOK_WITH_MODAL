@@ -46,6 +46,8 @@ const useFetchData = ({ initialFetchUrl }) => {
       });
       try {
         const response = await axios.get(fetchUrl);
+        console.log("in proc");
+        console.log(response);
         dispatch({
           type: "FETCH_SUCCESS",
           payload: {

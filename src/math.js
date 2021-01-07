@@ -13,16 +13,31 @@ import { makeStyles } from "@material-ui/core/styles";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import FullScreenDialog from "./components/DialogComponent";
 import Box from "@material-ui/core/Box";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 // const pageIdAndComponents = require("./pages/pageIdAndComponents.js").default();
-
+const darkTheme = createMuiTheme({
+  palette: {
+    type: "dark"
+  }
+});
 // let topicsJSON = require("./data/topics.json");
 
 export default function MathApp() {
+  const [darkState, setDarkState] = useState(true);
+  const palletType = darkState ? "dark" : "light";
+  const darkTheme = createMuiTheme({
+    palette: {
+      type: palletType
+    }
+  });
+
   return (
+    // <ThemeProvider theme={darkTheme}>
     <Router>
       <ModalSwitch />
     </Router>
+    // </ThemeProvider>
   );
 }
 
@@ -75,7 +90,7 @@ function Home({ chapterArray, componentsForDialog }) {
   let location = useLocation();
   const [spacing, setSpacing] = React.useState(2);
   const [isOpen, SetIsOpen] = useState(false);
-
+  const [dialogTitle, SetDialogTitle] = useState("");
   let pages = componentsForDialog;
 
   const [DialogChildsOpen, SetDialogChild] = useState(
@@ -98,9 +113,9 @@ function Home({ chapterArray, componentsForDialog }) {
   const classes = useStyles();
 
   // Handle
-  const handleDialogOpen = (event) => {
-    console.log(event.currentTarget.id);
-    const clickedBoxId = event.currentTarget.id;
+  const handleDialogOpen = (currentTarget, title) => {
+    SetDialogTitle(title);
+    const clickedBoxId = currentTarget;
     const matchedPageObject = pages.filter((d) => d.id === clickedBoxId);
     let pageComponent = <DefaultComponent />;
     if (matchedPageObject.length !== 0) {
@@ -126,7 +141,7 @@ function Home({ chapterArray, componentsForDialog }) {
             key={detail.name}
             id={detail.id}
             className={classes.cardButton}
-            onClick={handleDialogOpen}
+            onClick={(e) => handleDialogOpen(e.currentTarget.id, detail.name)}
           >
             <MediaCard title={detail.name} />
             {/* <div> {detail.name}</div> */}
@@ -163,7 +178,11 @@ function Home({ chapterArray, componentsForDialog }) {
         <h2> Financial Mathematics </h2>
         {divItems}
         {returnArray}
-        <FullScreenDialog isOpen={isOpen} handleClose={handleDialogClose}>
+        <FullScreenDialog
+          isOpen={isOpen}
+          handleClose={handleDialogClose}
+          title={dialogTitle}
+        >
           {DialogChildsOpen}
         </FullScreenDialog>
       </div>

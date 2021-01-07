@@ -4,6 +4,7 @@ import useFetchData from "../components/UseFetchData";
 import { Alert, AlertTitle } from "@material-ui/lab";
 import GGBInject from "../components/GGBInject";
 import Vectors from "./Vectors";
+import VectorsDefinitions from "./one/vectorsDefinition";
 import Vectors2 from "./1.2_Addition";
 export default () => [
   // Thius has to be a array. Object did not work
@@ -16,7 +17,7 @@ export default () => [
           {
             name: "1.1 Definition",
             id: "1.1",
-            Component: <Vectors2 />
+            Component: <VectorsDefinitions />
           },
           {
             name: "1.2 Addition, Subrtraction",

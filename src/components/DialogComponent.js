@@ -13,6 +13,7 @@ import Typography from "@material-ui/core/Typography";
 import CloseIcon from "@material-ui/icons/Close";
 import Slide from "@material-ui/core/Slide";
 import Box from "@material-ui/core/Box";
+import { TimeToLeaveTwoTone } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -28,7 +29,12 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function FullScreenDialog({ isOpen, handleClose, children }) {
+export default function FullScreenDialog({
+  isOpen,
+  handleClose,
+  children,
+  title
+}) {
   const classes = useStyles();
 
   return (
@@ -43,7 +49,7 @@ export default function FullScreenDialog({ isOpen, handleClose, children }) {
           <AppBar className={classes.appBar}>
             <Toolbar>
               <IconButton
-                edge="start"
+                TimeToLeaveTwoTone
                 color="inherit"
                 onClick={handleClose}
                 aria-label="close"
@@ -51,7 +57,7 @@ export default function FullScreenDialog({ isOpen, handleClose, children }) {
                 <CloseIcon />
               </IconButton>
               <Typography variant="h6" className={classes.title}>
-                Sound
+                {title}
               </Typography>
               <Button autoFocus color="inherit" onClick={handleClose}>
                 save

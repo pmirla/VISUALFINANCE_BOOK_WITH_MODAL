@@ -17,17 +17,17 @@ export default () => [
           {
             name: "1.1 Definition",
             id: "1.1",
-            Component: <VectorsDefinitions />
+            Component: <Vectors />
           },
           {
             name: "1.2 Addition, Subrtraction",
             id: "1.2",
-            Component: <Vectors2 />
+            Component: <Vectors />
           },
           {
             name: "1.3 Dot Product",
             id: "1.3",
-            Component: <Vectors2 />
+            Component: <Vectors />
           }
         ]
       },

@@ -6,7 +6,7 @@ import GGBInject from "../../components/GGBInject";
 const VectorDefinition = () => {
   const [{ data, isLoading, isError }, setFetchUrl] = useFetchData({
     initialFetchUrl:
-      "https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/sum_of_vectors_02.json"
+      "https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/v_017_sum_of_vectors_03.json"
     // "https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/ggbbase64/Beispiel_01_h.json"
   });
   let newParameters = {};

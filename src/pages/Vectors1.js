@@ -6,8 +6,8 @@ import GGBInject from "../components/GGBInject";
 const Vectors = () => {
   const [{ data, isLoading, isError }, setFetchUrl] = useFetchData({
     initialFetchUrl:
-      // "https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/v_012_direction_and_length_3d_Version2.json"
-      "https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/v_022_scalar_product_QuantityPrice_02.json"
+      "https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/v_012_direction_and_length_3d_Version2.json"
+    // "https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/v_022_scalar_product_QuantityPrice_02.json"
     // "https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/sum_of_vectors_02.json"
     // "https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/v_017_sum_of_vectors_03.json"
     // "https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/ggbbase64/Beispiel_01_h.json"
@@ -29,7 +29,7 @@ const Vectors = () => {
 
       newParameters2 = {
         // material_id: "ee5nfsq6",
-        width: 1690,
+        width: 1700,
         height: 806,
         borderColor: "#FFFFFF",
         enableShiftDragZoom: false,

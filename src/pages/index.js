@@ -5,7 +5,10 @@ import { Alert, AlertTitle } from "@material-ui/lab";
 import GGBInject from "../components/GGBInject";
 import Vectors from "./Vectors";
 import VectorsDefinitions from "./one/vectorsDefinition";
-import Vectors2 from "./1.2_Addition";
+import Vectors1 from "./Vectors1";
+import Vectors2 from "./Vectors2";
+import Vectors3 from "./Vectors3";
+
 export default () => [
   // Thius has to be a array. Object did not work
   {
@@ -17,17 +20,17 @@ export default () => [
           {
             name: "1.1 Definition",
             id: "1.1",
-            Component: <Vectors />
+            Component: <Vectors1 />
           },
           {
             name: "1.2 Addition, Subrtraction",
             id: "1.2",
-            Component: <Vectors />
+            Component: <Vectors2 />
           },
           {
             name: "1.3 Dot Product",
             id: "1.3",
-            Component: <Vectors />
+            Component: <Vectors3 />
           }
         ]
       },

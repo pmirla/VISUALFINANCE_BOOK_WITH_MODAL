@@ -29,7 +29,7 @@ const Vectors = () => {
 
       newParameters2 = {
         // material_id: "ee5nfsq6",
-        width: 1690,
+        width: 1700,
         height: 806,
         borderColor: "#FFFFFF",
         enableShiftDragZoom: false,

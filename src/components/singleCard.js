@@ -7,13 +7,23 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import { palette } from "@material-ui/system";
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 345
+    // backgroundColor: "#FF8800"
   },
   media: {
-    height: 140
+    height: 240
+  },
+  content: {
+    height: 120,
+    backgroundColor: "#ffcf02"
+  },
+  cardButton: {
+    backgroundColor: "black",
+    color: "white"
   }
 });
 
@@ -28,8 +38,13 @@ export default function MediaCard({ title, description }) {
           image="https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif"
           title={title}
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+        <CardContent className={classes.content}>
+          <Typography
+            className={classes.cardButton}
+            gutterBottom
+            variant="h5"
+            component="h2"
+          >
             {title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">

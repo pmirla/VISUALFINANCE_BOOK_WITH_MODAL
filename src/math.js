@@ -14,6 +14,12 @@ import ButtonBase from "@material-ui/core/ButtonBase";
 import FullScreenDialog from "./components/DialogComponent";
 import Box from "@material-ui/core/Box";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
 
 // const pageIdAndComponents = require("./pages/pageIdAndComponents.js").default();
 const darkTheme = createMuiTheme({
@@ -102,14 +108,29 @@ function Home({ chapterArray, componentsForDialog }) {
     root: {
       flexGrow: 1
     },
+    appbar: {
+      backgroundColor: "#ffcf02",
+      color: "black"
+    },
+
     paper: {
       height: 240,
       width: 350
     },
     control: {
       padding: theme.spacing(2)
+    },
+    menuButton: {
+      marginRight: theme.spacing(2)
+    },
+    title: {
+      flexGrow: 1
+    },
+    cardButton: {
+      backgroundColor: "black"
     }
   }));
+
   const classes = useStyles();
 
   // Handle
@@ -173,20 +194,41 @@ function Home({ chapterArray, componentsForDialog }) {
   ));
 
   return (
-    <Box m={10} p={3}>
-      <div>
-        <h2> Financial Mathematics </h2>
-        {divItems}
-        {returnArray}
-        <FullScreenDialog
-          isOpen={isOpen}
-          handleClose={handleDialogClose}
-          title={dialogTitle}
-        >
-          {DialogChildsOpen}
-        </FullScreenDialog>
+    <>
+      <div className={classes.root}>
+        <AppBar position="static" className={classes.appbar}>
+          <Toolbar>
+            <IconButton
+              edge="start"
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="menu"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="h4" className={classes.title}>
+              Illustrated Financial Mathematics. IFM
+            </Typography>
+            <Button color="inherit">Login</Button>
+          </Toolbar>
+        </AppBar>
       </div>
-    </Box>
+
+      <Box m={5} p={1}>
+        <div>
+          <h2> Financial Mathematics </h2>
+          {divItems}
+          {returnArray}
+          <FullScreenDialog
+            isOpen={isOpen}
+            handleClose={handleDialogClose}
+            title={dialogTitle}
+          >
+            {DialogChildsOpen}
+          </FullScreenDialog>
+        </div>
+      </Box>
+    </>
   );
 }
 

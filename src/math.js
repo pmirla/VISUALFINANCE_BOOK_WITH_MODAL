@@ -20,6 +20,7 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import { SVGInjector } from "@tanem/svg-injector";
 
 // const pageIdAndComponents = require("./pages/pageIdAndComponents.js").default();
 const darkTheme = createMuiTheme({
@@ -192,6 +193,20 @@ function Home({ chapterArray, componentsForDialog }) {
       <div key={eachTopic.name}>{eachTopic.name}</div>
     </>
   ));
+  useEffect(() => {
+    // SVGInjector(document.getElementById("inject-me"));
+  });
+
+  const mystyle = {
+    color: "white",
+    backgroundColor: "DodgerBlue",
+    padding: "10px",
+    fontFamily: "Arial",
+    position: "relative",
+    width: "100%",
+    height: "800px",
+    margin: "0 auto"
+  };
 
   return (
     <>
@@ -213,6 +228,11 @@ function Home({ chapterArray, componentsForDialog }) {
           </Toolbar>
         </AppBar>
       </div>
+      {/* <div
+        style={mystyle}
+        id="inject-me"
+        data-src="https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/Bernoulli_20.svg"
+      ></div> */}
 
       <Box m={5} p={1}>
         <div>

@@ -27,17 +27,13 @@ const useStyles = makeStyles({
   }
 });
 
-export default function MediaCard({ title, description }) {
+export default function SingleCard({ title, image, description }) {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
       <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image="https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif"
-          title={title}
-        />
+        <CardMedia className={classes.media} image={image} title={title} />
         <CardContent className={classes.content}>
           <Typography
             className={classes.cardButton}

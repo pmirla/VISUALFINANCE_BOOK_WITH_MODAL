@@ -13,6 +13,7 @@
     "prop-types": "15.7.2",
     "react": "latest",
     "react-dom": "latest",
+    "react-iframe": "1.8.0",
     "react-router-dom": "latest",
     "react-scripts": "2.0.0"
   },

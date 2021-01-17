@@ -22,6 +22,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { SVGInjector } from "@tanem/svg-injector";
 import Iframe from "react-iframe";
+import AppHeader from "./components/AppHeader";
 
 // const pageIdAndComponents = require("./pages/pageIdAndComponents.js").default();
 const darkTheme = createMuiTheme({
@@ -129,14 +130,22 @@ function Home({ chapterArray, componentsForDialog }) {
     root: {
       flexGrow: 1
     },
+
+    eachChapter: {
+      flexGrow: 1,
+      backgroundColor: "#f9f9f9",
+      padding: theme.spacing(2),
+      margin: "auto"
+    },
     appbar: {
       backgroundColor: "black",
       color: "lightgray"
     },
 
     paper: {
-      height: 240,
-      width: 350
+      padding: theme.spacing(2),
+      margin: "auto",
+      maxWidth: 500
     },
     control: {
       padding: theme.spacing(2)
@@ -145,7 +154,11 @@ function Home({ chapterArray, componentsForDialog }) {
       marginRight: theme.spacing(2)
     },
     title: {
-      flexGrow: 1
+      flexGrow: 1,
+      fontWeight: 200
+    },
+    lightFont: {
+      fontWeight: 200
     },
     cardButton: {
       backgroundColor: "black"
@@ -188,19 +201,25 @@ function Home({ chapterArray, componentsForDialog }) {
             className={classes.cardButton}
             onClick={(e) => handleDialogOpen(e.currentTarget.id, detail.name)}
           >
-            <SingleCard title={detail.name} image={detail.image} />
+            <SingleCard
+              title={detail.name}
+              image={detail.image}
+              description={detail.description}
+            />
           </ButtonBase>
         </Grid>
       );
     });
 
+    //
+
     const element = (
       <>
-        <Typography key={topic.name} variant="h4" className={classes.title}>
+        <Typography key={topic.name} variant="h4">
           {topic.name}
         </Typography>
 
-        <Grid container className={classes.root} spacing={10}>
+        <Grid container className={classes.eachChapter} spacing={10}>
           <Grid item xs={12}>
             <Grid container justify="left" spacing={spacing}>
               {detailArray}
@@ -214,7 +233,11 @@ function Home({ chapterArray, componentsForDialog }) {
 
   const chapterNames = chapterArray.map((eachTopic) => (
     <>
-      <Typography key={eachTopic.name} variant="h6" className={classes.title}>
+      <Typography
+        key={eachTopic.name}
+        variant="h6"
+        className={classes.lightFont}
+      >
         {eachTopic.name}
       </Typography>
     </>
@@ -223,44 +246,9 @@ function Home({ chapterArray, componentsForDialog }) {
     // SVGInjector(document.getElementById("inject-me"));
   });
 
-  const mystyle = {
-    color: "white",
-    backgroundColor: "DodgerBlue",
-    padding: "10px",
-    fontFamily: "Arial",
-    position: "relative",
-    width: "100%",
-    height: "800px",
-    margin: "0 auto"
-  };
-
-  const iframe = `<iframe src="https://codesandbox.io/embed/react-svg-embed-tzqr9?fontsize=14&hidenavigation=1&theme=dark&view=preview"
-  style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-  title="REACT SVG EMBED "
-  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-></iframe>`;
-
   return (
     <>
-      <div className={classes.root}>
-        <AppBar position="static" className={classes.appbar}>
-          <Toolbar>
-            <IconButton
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="menu"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h5" className={classes.title}>
-              Illustrated Financial Mathematics. IFM
-            </Typography>
-            <Button color="inherit">Login</Button>
-          </Toolbar>
-        </AppBar>
-      </div>
+      <AppHeader />
 
       {/* <div
         style={mystyle}
@@ -272,7 +260,8 @@ function Home({ chapterArray, componentsForDialog }) {
 
       <Box m={5} p={1}>
         <div>
-          <h2> Financial Mathematics </h2>
+          <Typography variant="h4">{"Topics"}</Typography>
+
           {chapterNames}
           {chapterCards}
 

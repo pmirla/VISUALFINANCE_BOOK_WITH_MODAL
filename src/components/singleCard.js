@@ -19,11 +19,16 @@ const useStyles = makeStyles({
   },
   content: {
     height: 120,
-    backgroundColor: "#ffcf02"
+    // backgroundColor: "#ffcf02"
+    backgroundColor: "#e8f5fc"
   },
   cardButton: {
     backgroundColor: "black",
-    color: "white"
+    color: "white",
+    fontWeight: 100
+  },
+  lightFont: {
+    fontWeight: 200
   }
 });
 
@@ -44,8 +49,7 @@ export default function SingleCard({ title, image, description }) {
             {title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {description}
           </Typography>
         </CardContent>
       </CardActionArea>

@@ -9,19 +9,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App1 from "./math";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-const darkTheme = createMuiTheme({
-  palette: {
-    type: "dark"
-  }
-});
-
 ReactDOM.render(
   [
     <>
-      {/* <ThemeProvider theme={darkTheme}> */}
-      <App1 /> <App1 />
-      {/* </ThemeProvider> */}
+      <App1 />
     </>
   ],
   document.getElementById("root")

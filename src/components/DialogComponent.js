@@ -67,18 +67,6 @@ export default function FullScreenDialog({
           <Box m={5} pt={3}>
             {children}
           </Box>
-          <List>
-            <ListItem button>
-              <ListItemText primary="Phone ringtone" secondary="Titania" />
-            </ListItem>
-            <Divider />
-            <ListItem button>
-              <ListItemText
-                primary="Default notification ringtone"
-                secondary="Tethys"
-              />
-            </ListItem>
-          </List>
         </Dialog>
       </div>
     </Box>

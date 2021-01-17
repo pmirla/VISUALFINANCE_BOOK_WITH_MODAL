@@ -40,15 +40,12 @@ const Vectors = () => {
   return (
     <>
       {isError && <p>Something went wrong...</p>}
-      <h2>Vector Addition </h2>
       {isLoading ? (
-        <p>Loading...</p>
+        <AlertTitle>Loading Applet</AlertTitle>
       ) : (
         <>
           <Alert severity="info">
-            <AlertTitle>Loading Applet</AlertTitle>
-            Interact with this Applet to understand the formula —{" "}
-            <strong>check it out!</strong>
+            Interact with this Applet to understand the formula
           </Alert>
 
           <GGBInject newParameters={newParameters2} id="someId2" />

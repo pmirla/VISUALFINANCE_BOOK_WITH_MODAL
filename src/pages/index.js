@@ -1,10 +1,4 @@
 import React from "react";
-import HomeIcon from "@material-ui/icons/Home";
-import useFetchData from "../components/UseFetchData";
-import { Alert, AlertTitle } from "@material-ui/lab";
-import GGBInject from "../components/GGBInject";
-import Vectors from "./Vectors";
-import VectorsDefinitions from "./one/vectorsDefinition";
 import Vectors1 from "./Vectors1";
 import Vectors2 from "./Vectors2";
 import Vectors3 from "./Vectors3";
@@ -53,21 +47,21 @@ export default () => [
           {
             name: "2.1 Definition of a Function",
             id: "2.1",
-            Component: <Vectors />,
+            Component: App1,
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif"
           },
           {
-            name: "2.2 Examples",
+            name: "2.2 Applications in Finance",
             id: "2.2",
-            Component: <Vectors />,
+            Component: App1,
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif"
           },
           {
             name: "2.3 Linking multiple functions",
             id: "2.3",
-            Component: <Vectors />,
+            Component: App1,
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
@@ -674,49 +668,5 @@ function App1() {
     <div className="App">
       <p> {text} </p>
     </div>
-  );
-}
-
-function App2() {
-  const text = "Hello World . I am inside Pages / App2";
-
-  return (
-    <div className="App">
-      <p> {text} </p>
-    </div>
-  );
-}
-
-function App3() {
-  const text = "Hello World . I am inside Pages / App3";
-
-  return (
-    <div className="App">
-      <p> {text} </p>
-    </div>
-  );
-}
-
-function PageId13({ GGBParams }) {
-  let newParameters = {};
-  newParameters = {
-    material_id: "ee5nfsq6",
-    width: 1200,
-    height: 1000,
-    borderColor: "#FFFFFF"
-    // ggbBase64: data.res
-  };
-  return (
-    <>
-      <h2>Vector Addition </h2>
-      <>
-        <Alert severity="info">
-          <AlertTitle>Loading Applet</AlertTitle>
-          Interact with this Applet to understand the formula —{" "}
-          <strong>check it out!</strong>
-        </Alert>
-        <GGBInject newParameters={newParameters} id="someId1" />
-      </>
-    </>
   );
 }

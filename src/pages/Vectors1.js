@@ -7,7 +7,7 @@ const Vectors = () => {
 
   const [{ data, isLoading, isError }, setFetchUrl] = useFetchData({
     initialFetchUrl:
-      "https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/v_012_direction_and_length_3d_Version2.json"
+      "https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/linear_algebra/v_012_direction_and_length_3d_03.json"
   });
 
   let newParameters = {};

@@ -16,11 +16,11 @@
     "react-helmet": "6.1.0",
     "react-iframe": "1.8.0",
     "react-router-dom": "latest",
-    "react-scripts": "2.0.0"
+    "react-scripts": "latest"
   },
   "keywords": [],
   "devDependencies": {
-    "react-scripts": "1.0.0"
+    "react-scripts": "latest"
   },
   "scripts": {
     "start": "react-scripts start",

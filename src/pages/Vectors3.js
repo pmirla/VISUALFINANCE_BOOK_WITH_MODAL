@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import useFetchData from "../components/UseFetchData";
 import { Alert, AlertTitle } from "@material-ui/lab";
 import GeogebraComponent from "../components/GeogebraComponent";
 //      "https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/v_017_sum_of_vectors_03.json"
 
 const Vectors = () => {
-  const [count, setCount] = React.useState(0);
-
-  const [{ data, isLoading, isError }, setFetchUrl] = useFetchData({
+  const [{ data, isLoading, isError }] = useFetchData({
     initialFetchUrl:
       "https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/v_017_sum_of_vectors_03.json"
   });

@@ -3,9 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useLocation,
-  useParams
+  useLocation
 } from "react-router-dom";
 import SingleCard from "./components/singleCard";
 import Grid from "@material-ui/core/Grid";
@@ -14,14 +12,7 @@ import ButtonBase from "@material-ui/core/ButtonBase";
 import FullScreenDialog from "./components/DialogComponent";
 import Box from "@material-ui/core/Box";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import { SVGInjector } from "@tanem/svg-injector";
-import Iframe from "react-iframe";
 import AppHeader from "./components/AppHeader";
 
 // const pageIdAndComponents = require("./pages/pageIdAndComponents.js").default();
@@ -115,8 +106,6 @@ function ModalSwitch() {
 
 //step2: See how data is passsed in
 function Home({ chapterArray, componentsForDialog }) {
-  let location = useLocation();
-  const [spacing, setSpacing] = React.useState(2);
   const [isOpen, SetIsOpen] = useState(false);
   const [dialogTitle, SetDialogTitle] = useState("");
   let pages = componentsForDialog;
@@ -221,7 +210,7 @@ function Home({ chapterArray, componentsForDialog }) {
 
         <Grid container className={classes.eachChapter} spacing={10}>
           <Grid item xs={12}>
-            <Grid container justify="left" spacing={spacing}>
+            <Grid container justify="left" spacing={2}>
               {detailArray}
             </Grid>
           </Grid>

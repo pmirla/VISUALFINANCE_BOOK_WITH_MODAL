@@ -4,7 +4,7 @@
   "description": "A simple example deployed using react-codesandboxer",
   "main": "index.js",
   "dependencies": {
-    "@material-ui/core": "4.10.2",
+    "@material-ui/core": "latest",
     "@material-ui/icons": "4.9.1",
     "@material-ui/lab": "4.0.0-alpha.57",
     "@tanem/svg-injector": "8.2.2",

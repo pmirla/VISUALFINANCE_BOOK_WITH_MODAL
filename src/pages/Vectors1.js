@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import useFetchData from "../components/UseFetchData";
 import { Alert, AlertTitle } from "@material-ui/lab";
 import GeogebraComponent from "../components/GeogebraComponent";
 const Vectors = () => {
-  const [count, setCount] = React.useState(0);
-
-  const [{ data, isLoading, isError }, setFetchUrl] = useFetchData({
+  const [{ data, isLoading, isError }] = useFetchData({
     initialFetchUrl:
       "https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/linear_algebra/v_012_direction_and_length_3d_03.json"
   });

@@ -4,12 +4,8 @@ import { Helmet } from "react-helmet";
 export default function GeogebraComponent(props) {
   //{ count, app_id, newParams }
   useEffect(() => {
-    debugger;
-    console.log("here in componentDidMount");
-
     setTimeout(() => {
-      // setCurrent(props.current)
-      console.log(window.GGBApplet.name);
+      // console.log(window.GGBApplet.name);
       var parameters = {
         width: 750,
         height: 500,

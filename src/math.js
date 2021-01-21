@@ -58,9 +58,7 @@ function ModalSwitch() {
 
   try {
     topicsJSON = require(`./pages/`).default();
-  } catch (err) {
-    console.log(err);
-  }
+  } catch (err) {}
 
   const chaptersAndTopics = topicsJSON[0]; //figure out more about this array from object
   const chapterArray = chaptersAndTopics.children;
@@ -160,6 +158,7 @@ function Home({ chapterArray, componentsForDialog }) {
   const handleDialogOpen = (currentTarget, title) => {
     SetDialogTitle(title);
     const clickedBoxId = currentTarget;
+    console.log("func_handleDialogOpen var_clickedBoxId" + clickedBoxId);
     const matchedPageObject = pages.filter((d) => d.id === clickedBoxId);
     let pageComponent = <DefaultComponent />;
     if (matchedPageObject.length !== 0) {
@@ -178,10 +177,8 @@ function Home({ chapterArray, componentsForDialog }) {
   //topics , then details
   let chapterCards = [];
   chapterArray.forEach((topic) => {
-    console.log(topic.name);
     let detailArray = [];
     topic.children.forEach((detail) => {
-      console.log(detail.name);
       detailArray.push(
         <Grid key={detail.name} item>
           <ButtonBase
@@ -238,14 +235,6 @@ function Home({ chapterArray, componentsForDialog }) {
   return (
     <>
       <AppHeader />
-
-      {/* <div
-        style={mystyle}
-        id="inject-me"
-        data-src="https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/Bernoulli_20.svg"
-      ></div> */}
-
-      {/* <Iframe iframe={iframe} /> */}
 
       <Box m={5} p={1}>
         <div>

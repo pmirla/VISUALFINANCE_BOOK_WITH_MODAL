@@ -12,32 +12,87 @@ export default () => [
         name: "1. Linear Algebra",
         children: [
           {
-            name: "1.1 Vector Definition",
+            name: "1.1 Definition Vector ",
             id: "1.1",
             Component: <Vectors1 />,
             image:
               "https://storage.googleapis.com/fin-math-images/card_images/card_One.gif",
             description:
-              "What are vectors? How to reprsent a Vector?  How to calculate magnitude of a vector ? \
-                 How to reprsent a Vector in 3 imensions?"
+              "Concept of Vector is introduced here both geometrically and algebraically. Contains interactive examples for independent exploration"
           },
           {
-            name: "1.2 Vector Addition, Subtraction",
+            name: "1.2 Vector Addition & Subtraction",
             id: "1.2",
             Component: <Vectors3 />,
             image:
               "https://storage.googleapis.com/fin-math-images/card_images/card_two.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "Illustartions of Vector Sums and Vector Differences. Contains interactive applets for independent practice"
           },
           {
-            name: "1.3 Vector Product",
+            name: "1.3 Scalar Multiplication",
             id: "1.3",
             Component: <Vectors2 />,
             image:
               "https://storage.googleapis.com/fin-math-images/card_images/card_three_2.gif",
             description:
-              "Real Life example of application of Vectors in Finance. "
+              "Real numbers are used to change the size of a Vector. Contains interactive applets"
+          },
+          {
+            name: "1.4 Linear Combinations with Vectors",
+            id: "1.4",
+            Component: <Vectors2 />,
+            image:
+              "https://storage.googleapis.com/fin-math-images/card_images/card_three_2.gif",
+            description:
+              "Fundamental concepts that are esential to understand Vector Algebra are introduced here with interactive applets"
+          },
+          {
+            name: "1.5 Linear (in-) Depenedence",
+            id: "1.5",
+            Component: <Vectors2 />,
+            image:
+              "https://storage.googleapis.com/fin-math-images/card_images/card_three_2.gif",
+            description:
+              "Fundamentals for solving linear equations. Contains applets for independent practice"
+          },
+
+          {
+            name: "1.6 Vector Spaces, Subspaces",
+            id: "1.6",
+            Component: <Vectors2 />,
+            image:
+              "https://storage.googleapis.com/fin-math-images/card_images/card_three_2.gif",
+            description:
+              "Vector spaces explained both Algebraically and Geometriclaly with interacive applets"
+          },
+          {
+            name: "1.7 Scalar product with Vectors",
+            id: "1.7",
+            Component: <Vectors2 />,
+            image:
+              "https://storage.googleapis.com/fin-math-images/card_images/card_three_2.gif",
+            description:
+              "Vector multiplication is demonstrated. Scalar Result is discussed with interactive explainer "
+          },
+          {
+            name: "1.8 Vector Multiplication",
+            id: "1.8",
+            Component: <Vectors2 />,
+            image:
+              "https://storage.googleapis.com/fin-math-images/card_images/card_three_2.gif",
+            description:
+              "The result of Vector multiplications is a Vector. Contains applets for independent practice"
+          },
+
+          {
+            name: "1.9 Matrix",
+            id: "1.9",
+            Component: <Vectors2 />,
+            image:
+              "https://storage.googleapis.com/fin-math-images/card_images/card_three_2.gif",
+            description:
+              "We discuss concept of Vector of Vectors. Contains applets for independent practice"
           }
         ]
       },
@@ -49,14 +104,18 @@ export default () => [
             id: "2.1",
             Component: App1,
             image:
-              "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif"
+              "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
+            description:
+              "We define the general notion of a function. Then we explain which properties a real-world function has. We also explain the terms codomain and domain"
           },
           {
             name: "2.2 Applications in Finance",
             id: "2.2",
             Component: App1,
             image:
-              "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif"
+              "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
+            description:
+              "Here you will find examples that you know form school, but beyond that you will get to know a whole bunch of interesting functions that play a role in Finance"
           },
           {
             name: "2.3 Linking multiple functions",
@@ -65,7 +124,7 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "There are multiple ways to link functions. Here you will learn the most important ones"
           },
           {
             name: "2.4 Parametric Functions",

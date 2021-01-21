@@ -5,7 +5,7 @@ import GeogebraComponent from "../components/GeogebraComponent";
 const Vectors = () => {
   const [{ data, isLoading, isError }] = useFetchData({
     initialFetchUrl:
-      "https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/linear_algebra/v_012_direction_and_length_3d_03.json"
+      "https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/ggbbase64/v_012_direction_and_length_3d_04.json"
   });
 
   let newParameters = {};

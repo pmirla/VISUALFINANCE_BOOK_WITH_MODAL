@@ -46,8 +46,7 @@ const useFetchData = ({ initialFetchUrl }) => {
       });
       try {
         const response = await axios.get(fetchUrl);
-        console.log("in proc");
-        console.log(response);
+        console.log("func_useFetchData var_fetchURL" + fetchUrl);
         dispatch({
           type: "FETCH_SUCCESS",
           payload: {

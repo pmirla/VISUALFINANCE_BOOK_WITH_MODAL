@@ -9,6 +9,8 @@
     "@material-ui/lab": "4.0.0-alpha.57",
     "@tanem/svg-injector": "8.2.2",
     "axios": "0.21.1",
+    "dotenv": "8.2.0",
+    "firebase": "8.2.4",
     "material-ui": "1.0.0-beta.46",
     "prop-types": "15.7.2",
     "react": "latest",

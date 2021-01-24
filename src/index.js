@@ -8,11 +8,15 @@
 */
 import React from "react";
 import ReactDOM from "react-dom";
-import App1 from "./math";
+import MathApp from "./math";
+import AuthProvider from "./provider/AuthProvider";
+
 ReactDOM.render(
   [
     <>
-      <App1 />
+      <AuthProvider>
+        <MathApp />
+      </AuthProvider>
     </>
   ],
   document.getElementById("root")

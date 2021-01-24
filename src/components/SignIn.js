@@ -1,7 +1,7 @@
 // add useContext
 import React, { useContext } from "react";
-import { firebaseAuth } from "../../provider/AuthProvider";
-import { Signup } from "./Signup";
+import { firebaseAuth } from "../provider/AuthProvider";
+import { Signup } from "./SignUp";
 import { Route, Switch } from "react-router-dom";
 const Signin = () => {
   const { handleSignin, inputs, setInputs, errors } = useContext(firebaseAuth);

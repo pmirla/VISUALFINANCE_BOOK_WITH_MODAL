@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import Signup from "./SignIn";
-import Signin from "./SignUp";
-import Home from "../../components/common/Home";
-import { firebaseAuth } from "../../provider/AuthProvider";
+import Signup from "./SignUp";
+import Signin from "./SignIn";
+import Home from "./Home";
+import { firebaseAuth } from "../provider/AuthProvider";
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,7 +10,6 @@ import {
   Link,
   useHistory
 } from "react-router-dom";
-import Divider from "@material-ui/core/Divider";
 
 function Account() {
   const { token, handleSignout, inputs } = useContext(firebaseAuth);
@@ -20,6 +19,7 @@ function Account() {
   return (
     <>
       <p>This is page to manage your Account </p>
+
       <Router>
         {token !== null ? (
           <>
@@ -27,7 +27,7 @@ function Account() {
             <button onClick={handleSignout}>sign out </button>
             <button
               onClick={() => {
-                history.goBack();
+                history.push("/");
               }}
             >
               Go Back{" "}
@@ -36,8 +36,7 @@ function Account() {
         ) : (
           <>
             <Signin />
-            <Divider variant="middle" />
-
+            <br />
             <div>
               <Link to="/home/Account/Signup">New users Sign Up</Link>
             </div>

@@ -59,5 +59,50 @@ export const authMethods = {
         setToken(null);
         console.error(err.message);
       });
+  },
+
+  sendEmailLink: (email, setError, setToken) => {
+    // not complete: https://github.com/firebase/quickstart-js/blob/master/auth/email-link.html
+
+    var actionCodeSettings = {
+      // URL you want to redirect back to. The domain (www.example.com) for this
+      // URL must be in the authorized domains list in the Firebase Console.
+      url: "https://2t0v6.csb.app/",
+      // This must be true.
+      handleCodeInApp: true
+      // iOS: {
+      //   bundleId: "com.example.ios"
+      // },
+      // android: {
+      //   packageName: "com.example.android",
+      //   installApp: true,
+      //   minimumVersion: "12"
+      // },
+      // dynamicLinkDomain: "https://2t0v6.csb.app/"
+    };
+    // var email = window.localStorage.getItem("emailForSignIn");
+    if (!email) {
+      // User opened the link on a different device. To prevent session fixation
+      // attacks, ask the user to provide the associated email again. For example:
+      email = window.prompt("Please provide your email for confirmation");
+    }
+    console.log("sent" + email);
+    firebase
+      .auth()
+      .sendSignInLinkToEmail(email, actionCodeSettings)
+      .then(() => {
+        // The link was successfully sent. Inform the user.
+        // Save the email locally so you don't need to ask the user for it again
+        // if they open the link on the same device.
+        window.localStorage.setItem("emailForSignIn", email);
+        alert("sent" + email);
+        // ...
+      })
+      .catch((error) => {
+        console.log(error);
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+      });
   }
 };

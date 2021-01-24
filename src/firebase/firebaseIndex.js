@@ -11,5 +11,7 @@ var firebaseConfig = {
   measurementId: process.env.REACT_APP_MEASUREMENT_ID
 };
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+if (typeof window !== "undefined") {
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+}

@@ -10,3 +10,5 @@ Thats it.
 Keep it simple. Need not be complicated
 For each chapter and topic , create seperate components. Yes. Seep[erate components.
 That's it
+
+payments with stripe and firebase: https://medium.com/firebase-developers/go-serverless-manage-payments-in-your-apps-with-cloud-functions-for-firebase-3528cfad770

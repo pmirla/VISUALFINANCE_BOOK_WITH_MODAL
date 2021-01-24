@@ -4,6 +4,12 @@ import { authMethods } from "../firebase/authmethods";
 export const firebaseAuth = React.createContext();
 
 const AuthProvider = (props) => {
+  const [email, setEmail] = useState(
+    window.localStorage.getItem("emailForSignIn") || ""
+  );
+
+  const [errorResponse, setErrorResponse] = useState("");
+
   const initState = { email: "", password: "" };
   const [inputs, setInputs] = useState(initState);
   const [errors, setErrors] = useState([]);
@@ -27,6 +33,10 @@ const AuthProvider = (props) => {
     authMethods.signout(setErrors, setToken);
   };
 
+  const handleSigninEmailLink = () => {
+    alert(inputs.email);
+    authMethods.sendEmailLink(inputs.email, setErrors, setToken);
+  };
   return (
     <firebaseAuth.Provider
       value={{
@@ -37,7 +47,8 @@ const AuthProvider = (props) => {
         inputs,
         setInputs,
         errors,
-        handleSignout
+        handleSignout,
+        handleSigninEmailLink
       }}
     >
       {props.children}

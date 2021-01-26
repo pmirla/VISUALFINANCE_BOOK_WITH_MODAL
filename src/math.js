@@ -15,7 +15,12 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import AppHeader from "./components/AppHeader";
 import AccountComponent from "./components/Account";
+import CardForm from "./components/CardForm";
 import { useHistory } from "react-router-dom";
+
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+const stripePromise = loadStripe("pk_test_6pRNASCoBOKtIshFeQd4XMUh");
 
 // const pageIdAndComponents = require("./pages/pageIdAndComponents.js").default();
 const darkTheme = createMuiTheme({
@@ -50,6 +55,11 @@ export default function MathApp() {
         </Route>
         <Route path="/AccountComponent">
           <AccountComponent />
+        </Route>
+        <Route path="/card">
+          <Elements stripe={stripePromise}>
+            <CardForm />
+          </Elements>
         </Route>
       </Router>
     </ThemeProvider>

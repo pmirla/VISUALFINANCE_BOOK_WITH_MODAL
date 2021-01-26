@@ -2,6 +2,8 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import AppHeader from "../../components/AppHeader";
 import GetGGBJson from "../../components/GetGGBJson";
+import { Box } from "@material-ui/core";
+import Grid from "@material-ui/core/Grid";
 
 const Vectors = () => {
   let ggbParameters1 = {
@@ -26,17 +28,21 @@ const Vectors = () => {
       is algebraic in nature and needs more prerequisites , especially the
       coordinate system. In this page, you can experimentally inventigate
       relationship between two defintions
-      <GetGGBJson
-        jsonUrl="https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/chapters-ifm/LinearAlgebra/v_011_direction_and_length_integer_real_02.json"
-        ggbParameters={ggbParameters1}
-        appId="DefinfitionVector1"
-      />
+      <Grid container justify="center">
+        <GetGGBJson
+          jsonUrl="https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/chapters-ifm/LinearAlgebra/v_011_direction_and_length_integer_real_02.json"
+          ggbParameters={ggbParameters1}
+          appId="DefinfitionVector1"
+        />
+      </Grid>
       Your second exercise is three dimenisonal.
-      <GetGGBJson
-        jsonUrl="https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/ggbbase64/v_012_direction_and_length_3d_04.json"
-        ggbParameters={ggbParameters2}
-        appId="DefinfitionVector2"
-      />
+      <Grid container justify="center">
+        <GetGGBJson
+          jsonUrl="https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/ggbbase64/v_012_direction_and_length_3d_04.json"
+          ggbParameters={ggbParameters2}
+          appId="DefinfitionVector2"
+        />
+      </Grid>
     </>
   );
 };

@@ -3,6 +3,8 @@ import Vectors1 from "./Vectors1";
 import Vectors2 from "./Vectors2";
 import Vectors3 from "./Vectors3";
 
+import * as LinearAlgebra from "../pages/LinearAlgebra";
+
 export default () => [
   // Thius has to be a array. Object did not work
   {
@@ -14,7 +16,7 @@ export default () => [
           {
             name: "1.1 Definition Vector ",
             id: "1.1",
-            Component: <Vectors1 />,
+            Component: LinearAlgebra.Ch_1_1_VectorDefinition,
             image:
               "https://storage.googleapis.com/fin-math-images/card_images/card_One.gif",
             description:

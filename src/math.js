@@ -14,6 +14,13 @@ import Box from "@material-ui/core/Box";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import AppHeader from "./components/AppHeader";
+import AccountComponent from "./components/Account";
+import CardForm from "./components/CardForm";
+import { useHistory } from "react-router-dom";
+
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+const stripePromise = loadStripe("pk_test_6pRNASCoBOKtIshFeQd4XMUh");
 
 // const pageIdAndComponents = require("./pages/pageIdAndComponents.js").default();
 const darkTheme = createMuiTheme({
@@ -43,7 +50,17 @@ export default function MathApp() {
   return (
     <ThemeProvider theme={darkTheme}>
       <Router>
-        <ModalSwitch />
+        <Route exact path="/">
+          <ModalSwitch />
+        </Route>
+        <Route path="/AccountComponent">
+          <AccountComponent />
+        </Route>
+        <Route path="/card">
+          <Elements stripe={stripePromise}>
+            <CardForm />
+          </Elements>
+        </Route>
       </Router>
     </ThemeProvider>
   );
@@ -104,6 +121,8 @@ function ModalSwitch() {
 
 //step2: See how data is passsed in
 function Home({ chapterArray, componentsForDialog }) {
+  let history = useHistory();
+
   const [isOpen, SetIsOpen] = useState(false);
   const [dialogTitle, SetDialogTitle] = useState("");
   let pages = componentsForDialog;
@@ -154,6 +173,12 @@ function Home({ chapterArray, componentsForDialog }) {
 
   const classes = useStyles();
 
+  const handleSignInButton = () => {
+    history.push("AccountComponent");
+
+    // SetDialogChild(AccountComponent);
+  };
+
   // Handle
   const handleDialogOpen = (currentTarget, title) => {
     SetDialogTitle(title);
@@ -188,6 +213,7 @@ function Home({ chapterArray, componentsForDialog }) {
             onClick={(e) => handleDialogOpen(e.currentTarget.id, detail.name)}
           >
             <SingleCard
+              key={detail.id}
               title={detail.name}
               image={detail.image}
               description={detail.description}
@@ -235,7 +261,7 @@ function Home({ chapterArray, componentsForDialog }) {
   return (
     <>
       <AppHeader />
-
+      <button onClick={handleSignInButton}>Login</button>
       <Box m={5} p={1}>
         <div>
           <Typography variant="h4">{"Topics"}</Typography>

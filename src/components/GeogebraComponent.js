@@ -40,13 +40,13 @@ export default function GeogebraComponent(props) {
         macro: 0
       };
 
-      var ggbApplet = new window.GGBApplet(parameters, true);
+      var ggbApplet = new window.GGBApplet(parameters, views, true);
       ggbApplet.setHTML5Codebase(
         "https://www.geogebra.org/apps/5.0.498.0/web3d"
       );
 
       ggbApplet.inject(props.id);
-    }, 500);
+    }, 760);
   }, [props.newParameters, props.id]);
 
   return (

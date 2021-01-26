@@ -7,6 +7,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
+import { useHistory } from "react-router-dom";
 
 // import FoodXLogo from '../assets/FoodXLogo.png';
 
@@ -52,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
 
 function AppHeader(props) {
   const classes = useStyles();
+  let history = useHistory();
 
   return (
     <AppBar position="relative" elevation={0} className={classes.appbar}>
@@ -65,7 +67,12 @@ function AppHeader(props) {
             <ListItemText primary={"Illustrated Financial Mathematics "} />
           </ListItem>
 
-          <ListItem button key={"LOGIN"} className={classes.login}>
+          <ListItem
+            button
+            key={"LOGIN"}
+            className={classes.login}
+            onClick={() => history.push("AccountComponent")}
+          >
             <ListItemText primary={"LOGIN"} />
           </ListItem>
         </List>

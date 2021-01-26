@@ -27,7 +27,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 export default function FullScreenDialog({
   isOpen,
   handleClose,
-  children,
+  children, // This is most important prop. Anything that FullScreenDialog waps will be a child
   title
 }) {
   const classes = useStyles();
@@ -44,7 +44,6 @@ export default function FullScreenDialog({
           <AppBar className={classes.appBar}>
             <Toolbar>
               <IconButton
-                TimeToLeaveTwoTone
                 color="inherit"
                 onClick={handleClose}
                 aria-label="close"
@@ -55,7 +54,7 @@ export default function FullScreenDialog({
                 {title}
               </Typography>
               <Button autoFocus color="inherit" onClick={handleClose}>
-                save
+                Close
               </Button>
             </Toolbar>
           </AppBar>

@@ -25,7 +25,7 @@ export default () => [
           {
             name: "1.2 Vector Addition & Subtraction",
             id: "1.2",
-            Component: <Vectors3 />,
+            Component: LinearAlgebra.Ch_1_2_VectorAddandSub,
             image:
               "https://storage.googleapis.com/fin-math-images/card_images/card_two.gif",
             description:

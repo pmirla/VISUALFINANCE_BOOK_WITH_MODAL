@@ -204,23 +204,25 @@ function Home({ chapterArray, componentsForDialog }) {
   chapterArray.forEach((topic) => {
     let detailArray = [];
     topic.children.forEach((detail) => {
-      detailArray.push(
-        <Grid key={detail.name} item>
-          <ButtonBase
-            key={detail.name}
-            id={detail.id}
-            className={classes.cardButton}
-            onClick={(e) => handleDialogOpen(e.currentTarget.id, detail.name)}
-          >
-            <SingleCard
-              key={detail.id}
-              title={detail.name}
-              image={detail.image}
-              description={detail.description}
-            />
-          </ButtonBase>
-        </Grid>
-      );
+      if (detail.active === 1) {
+        detailArray.push(
+          <Grid key={detail.name} item>
+            <ButtonBase
+              key={detail.name}
+              id={detail.id}
+              className={classes.cardButton}
+              onClick={(e) => handleDialogOpen(e.currentTarget.id, detail.name)}
+            >
+              <SingleCard
+                key={detail.id}
+                title={detail.name}
+                image={detail.image}
+                description={detail.description}
+              />
+            </ButtonBase>
+          </Grid>
+        );
+      }
     });
 
     //

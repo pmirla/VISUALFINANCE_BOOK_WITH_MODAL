@@ -20,7 +20,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/card_images/card_One.gif",
             description:
-              "Concept of Vector is introduced here both geometrically and algebraically. Contains interactive examples for independent exploration"
+              "Concept of Vector is introduced here both geometrically and algebraically. Contains interactive examples for independent exploration",
+            active: 1
           },
           {
             name: "1.2 Vector Addition & Subtraction",
@@ -29,7 +30,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/card_images/card_two.gif",
             description:
-              "Illustartions of Vector Sums and Vector Differences. Contains interactive applets for independent practice"
+              "Illustartions of Vector Sums and Vector Differences. Contains interactive applets for independent practice",
+            active: 1
           },
           {
             name: "1.3 Scalar Multiplication",
@@ -38,7 +40,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/card_images/card_three_2.gif",
             description:
-              "Real numbers are used to change the size of a Vector. Contains interactive applets"
+              "Real numbers are used to change the size of a Vector. Contains interactive applets",
+            active: 1
           },
           {
             name: "1.4 Linear Combinations with Vectors",
@@ -47,7 +50,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/card_images/card_three_2.gif",
             description:
-              "Fundamental concepts that are esential to understand Vector Algebra are introduced here with interactive applets"
+              "Fundamental concepts that are esential to understand Vector Algebra are introduced here with interactive applets",
+            active: 1
           },
           {
             name: "1.5 Linear (in-) Depenedence",
@@ -56,7 +60,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/card_images/card_three_2.gif",
             description:
-              "Fundamentals for solving linear equations. Contains applets for independent practice"
+              "Fundamentals for solving linear equations. Contains applets for independent practice",
+            active: 1
           },
 
           {
@@ -66,7 +71,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/card_images/card_three_2.gif",
             description:
-              "Vector spaces explained both Algebraically and Geometriclaly with interacive applets"
+              "Vector spaces explained both Algebraically and Geometriclaly with interacive applets",
+            active: 1
           },
           {
             name: "1.7 Scalar product with Vectors",
@@ -75,7 +81,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/card_images/card_three_2.gif",
             description:
-              "Vector multiplication is demonstrated. Scalar Result is discussed with interactive explainer "
+              "Vector multiplication is demonstrated. Scalar Result is discussed with interactive explainer ",
+            active: 1
           },
           {
             name: "1.8 Vector Multiplication",
@@ -84,7 +91,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/card_images/card_three_2.gif",
             description:
-              "The result of Vector multiplications is a Vector. Contains applets for independent practice"
+              "The result of Vector multiplications is a Vector. Contains applets for independent practice",
+            active: 1
           },
 
           {
@@ -94,7 +102,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/card_images/card_three_2.gif",
             description:
-              "We discuss concept of Vector of Vectors. Contains applets for independent practice"
+              "We discuss concept of Vector of Vectors. Contains applets for independent practice",
+            active: 1
           }
         ]
       },
@@ -117,7 +126,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "Here you will find examples that you know form school, but beyond that you will get to know a whole bunch of interesting functions that play a role in Finance"
+              "Here you will find examples that you know form school, but beyond that you will get to know a whole bunch of interesting functions that play a role in Finance",
+            active: 0
           },
           {
             name: "2.3 Linking multiple functions",
@@ -126,7 +136,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "There are multiple ways to link functions. Here you will learn the most important ones"
+              "There are multiple ways to link functions. Here you will learn the most important ones",
+            active: 0
           },
           {
             name: "2.4 Parametric Functions",
@@ -135,7 +146,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "2.5 Functions with several Variables",
@@ -144,7 +156,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "2.6 Constraint Functions",
@@ -153,7 +166,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "2.7 Utility Function",
@@ -162,7 +176,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "2.8 Production Function",
@@ -171,7 +186,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "2.9 Present Value Function",
@@ -180,7 +196,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "2.10 Capital Asset Pricing Model",
@@ -189,7 +206,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "2.11 Payoffs of Contracts",
@@ -198,7 +216,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "2.12 Payoffs of an Option",
@@ -207,7 +226,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "2.13 Forward Exchange Rate",
@@ -216,7 +236,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           }
         ]
       },
@@ -230,7 +251,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "3.2 Differentiation Rules",
@@ -239,7 +261,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "3.3 Maximum and Minimum of a Function",
@@ -248,7 +271,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "3.4 Mean Value Theorem",
@@ -257,7 +281,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "3.5 Approximation of Functions by Polynoms",
@@ -275,7 +300,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "3.7 Integration: Anti Derivative Function",
@@ -284,7 +310,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "3.8 First Fundamental Theorem of Calculus",
@@ -293,7 +320,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "3.9 Second Fundamental Theorem of Calculus",
@@ -302,7 +330,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "3.10 Change in Variables in Indefinite Integrals",
@@ -311,7 +340,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "3.11 Double Integral",
@@ -320,7 +350,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "3.12 Duration and Convexity of securitisation assets",
@@ -329,7 +360,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           }
         ]
       },
@@ -343,7 +375,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "4.2 The Chain Rule",
@@ -352,7 +385,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "4.3 Derivatives of Implicit Functions",
@@ -361,7 +395,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "4.4 The Total Differential",
@@ -370,7 +405,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "4.5 Directional Derivatives",
@@ -379,7 +415,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "4.6 Gradients",
@@ -388,7 +425,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "4.7 Tangent Planes and Normal Lines",
@@ -397,7 +435,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "4.8 Extrema of Functions of several Variables",
@@ -406,7 +445,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
 
           {
@@ -416,7 +456,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           }
         ]
       },
@@ -430,7 +471,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "5.2 Logarithmic Functions",
@@ -439,7 +481,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "5.3 Logarithmic Identities",
@@ -448,7 +491,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "5.4 Change of Base",
@@ -457,7 +501,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "5.5 The Natural Logarithmic Function",
@@ -466,7 +511,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "5.6 The Exponential Function",
@@ -475,7 +521,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "5.7 Power Series ",
@@ -484,7 +531,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "5.8 General Functions",
@@ -493,7 +541,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "5.9 Some Applications ",
@@ -502,7 +551,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "5.10 Integration by Parts",
@@ -511,7 +561,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           }
         ]
       },
@@ -526,7 +577,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "6.2 Solution Methods",
@@ -535,7 +587,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "6.3 First-Order Linear Differential Equations",
@@ -544,7 +597,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "6.4 Second-Order Linear Differential Equations",
@@ -553,7 +607,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "6.5 Linear Differential Equation Systems",
@@ -562,7 +617,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           }
         ]
       },
@@ -576,7 +632,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           }
         ]
       },
@@ -590,7 +647,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "8.2 The Mathematical Programming Problem",
@@ -599,7 +657,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "8.3 Unconstrained Optimization",
@@ -608,7 +667,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "8.4 Constrained Optimization",
@@ -617,7 +677,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
 
           {
@@ -627,7 +688,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           }
         ]
       },
@@ -641,7 +703,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "9.2 Formulation of the LP",
@@ -650,7 +713,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "9.3 The Geometry of the LP",
@@ -659,7 +723,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "9.4 The Simplex Method",
@@ -668,7 +733,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
 
           {
@@ -678,7 +744,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "9.6 The Dual Problem of the LP",
@@ -687,7 +754,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "9.7 The Lagrangian Approach",
@@ -696,7 +764,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           },
           {
             name: "9.8 Economic Theory and Duality",
@@ -705,7 +774,8 @@ export default () => [
             image:
               "https://storage.googleapis.com/fin-math-images/Power_Series_sine_05.gif",
             description:
-              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided"
+              "What are vector components? How to Add and Subtract two Vectors? Several Examples provided",
+            active: 0
           }
         ]
       }

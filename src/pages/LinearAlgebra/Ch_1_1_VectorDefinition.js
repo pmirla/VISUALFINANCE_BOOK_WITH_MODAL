@@ -37,20 +37,20 @@ const Vectors = () => {
         coordinate system. In this page, you can experimentally inventigate
         relationship between two defintions
       </Typography>
-      <Grid container justify="center" key="DefinfitionVector1">
+      {/* <Grid container justify="center" key="DefinfitionVector1">
         <GetGGBJson
-          jsonUrl="https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/chapters-ifm/LinearAlgebra/v_011_direction_and_length_integer_real_02.json"
+          jsonUrl="https://secret-ocean-49799.herokuapp.com/https://storage.googleapis.com/chapters-ifm/LinearAlgebra/v_011_direction_and_length_integer_real_02.json"
           ggbParameters={ggbParameters1}
           appId="DefinfitionVector1"
         />
-      </Grid>
+      </Grid> */}
       <Typography variant="h6" style={{ fontWeight: 200 }}>
         Your second exercise is three dimenisonal.
       </Typography>
 
       <Grid container justify="center" key="DefinfitionVector2">
         <GetGGBJson
-          jsonUrl="https://cors-anywhere.herokuapp.com/https://storage.googleapis.com/fin-math-images/ggbbase64/v_012_direction_and_length_3d_04.json"
+          jsonUrl="https://secret-ocean-49799.herokuapp.com/https://storage.googleapis.com/fin-math-images/ggbbase64/v_012_direction_and_length_3d_04.json"
           ggbParameters={ggbParameters2}
           appId="DefinfitionVector2"
         />
